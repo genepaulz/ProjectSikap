@@ -8,11 +8,20 @@ class LoginView(View):
     def get(self,request):
         return render(request,'blogin.html')
 
-    # def post(self,request):        
-    #     user = request.POST.get("user")        
-    #     password = request.POST.get("pass")
-    #     q = Admin.objects.get(username = user)
-    #     if q.password == password:
-    #         return redirect('app:dashboard_view')
-    #     else:
-    #         return HttpResponse("User does not exist!")
+    def post(self,request):        
+        email = request.POST.get("email")        
+        password = request.POST.get("pass")
+        isEmployer = 0
+        try:
+            q= Applicant.objects.get(email=email)
+            isEmployer = 0
+        except:
+            isEmployer = 1
+            q = Employer.objects.get(email=email)
+        
+
+        if q.password == password:
+            return HttpResponse("Success")
+        else:
+            return HttpResponse("User does not exist!")
+       
