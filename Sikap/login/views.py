@@ -11,12 +11,9 @@ class LoginView(View):
     def post(self,request):        
         email = request.POST.get("email")        
         password = request.POST.get("pass")
-        isEmployer = 0
         try:
             q= Applicant.objects.get(email=email)
-            isEmployer = 0
         except:
-            isEmployer = 1
             q = Employer.objects.get(email=email)
         
 
