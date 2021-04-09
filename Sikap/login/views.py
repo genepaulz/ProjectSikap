@@ -12,10 +12,9 @@ class LoginView(View):
         email = request.POST.get("email")        
         password = request.POST.get("pass")
         try:
-            q= Applicant.objects.get(email=email)
+            q = Applicant.objects.get(email=email)
         except:
-            q = Employer.objects.get(email=email)
-        
+            q = Employer.objects.get(email=email)        
 
         if q.password == password:
             return HttpResponse("Success")
