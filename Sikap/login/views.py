@@ -6,7 +6,7 @@ from .models import *
 # Create your views here.
 class LoginView(View):
     def get(self,request):
-        return render(request,'login.html')
+        return render(request,'blogin.html')
 
     def post(self,request):        
         email = request.POST.get("email")        
