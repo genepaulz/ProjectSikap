@@ -7,3 +7,7 @@ from .models import *
 class ViewAsView(View):
     def get(self,request):
         return render(request,'viewas.html')
+
+class ViewAsEView(View):
+    def get(self,request):
+        return render(request,'viewase.html')
