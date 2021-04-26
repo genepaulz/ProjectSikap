@@ -3,7 +3,7 @@ from . import views
 
 app_name = 'viewas'
 urlpatterns = [
-    path('a',views.ViewAsView.as_view(),name="viewas_view"),
+    path('a',views.ViewAsAView.as_view(),name="viewasa_view"),
     path('e',views.ViewAsEView.as_view(),name="viewase_view"),
     # path('dashboard/',views.DashboardView.as_view(),name="dashboard_view"),
     # path('products/',views.ProductView.as_view(),name="products_view"),

@@ -4,9 +4,9 @@ from django.http import HttpResponse
 from .models import *
 #from .forms import *
 # Create your views here.
-class ViewAsView(View):
+class ViewAsAView(View):
     def get(self,request):
-        return render(request,'viewas.html')
+        return render(request,'applicant.html')
 
 class ViewAsEView(View):
     def get(self,request):
