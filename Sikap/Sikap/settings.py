@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'login',
     'landing',
-    'viewas'
+    'viewas',
+    'posts'
 ]
 
 MIDDLEWARE = [
