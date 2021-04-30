@@ -6,18 +6,28 @@ from .models import *
 # Create your views here.
 class LoginView(View):
     def get(self,request):
-        return render(request,'blogin.html')
+        return render(request,'login.html')
 
     def post(self,request):        
         email = request.POST.get("email")        
         password = request.POST.get("pass")
-        try:
-            q = Applicant.objects.get(email=email)
-        except:
-            q = Employer.objects.get(email=email)        
-
-        if q.password == password:
-            return HttpResponse("Success")
+        
+        q = Applicant.objects.filter(email=email)
+        if (q):
+            try:
+                q = Applicant.objects.get(email=email)
+                if(q.password==password):
+                    return HttpResponse("Success")
+                else:
+                    return HttpResponse("Fail")
+            except:
+                return HttpResponse("User does not exist!")
         else:
-            return HttpResponse("User does not exist!")
-       
+            try:
+                q = Employer.objects.get(email=email)
+                if(q.password==password):
+                    return HttpResponse("Success")
+                else:
+                    return HttpResponse("Fail")
+            except:
+                return HttpResponse("User does not exist!")
