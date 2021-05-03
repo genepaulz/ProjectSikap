@@ -1,11 +1,22 @@
-# from django import forms
-# from login.models import *
+from django import forms
+from login.models import *
 
-# class userForm(forms.ModelForm):
+class userForm(forms.ModelForm):
 
-#     class Meta:
-#         model = Applicant
-#         fields = [
-#             'email',
-#             'password',
-#         ]
+    class Meta:
+        model = User
+        fields = [
+            'account_type',
+            'email',
+            'password',
+            'name',
+            'surname',
+            'user_type',
+            'isVerified',
+            'companyName',
+            'industry',
+            'region',
+            'province',
+            'city',
+            'age',
+        ]

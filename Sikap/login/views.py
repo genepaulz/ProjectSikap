@@ -12,19 +12,10 @@ class LoginView(View):
         email = request.POST.get("email")        
         password = request.POST.get("pass")
         
-        q = Applicant.objects.filter(email=email)
+        q = User.objects.filter(email=email)
         if (q):
             try:
-                q = Applicant.objects.get(email=email)
-                if(q.password==password):
-                    return HttpResponse("Success")
-                else:
-                    return HttpResponse("Fail")
-            except:
-                return HttpResponse("User does not exist!")
-        else:
-            try:
-                q = Employer.objects.get(email=email)
+                q = User.objects.get(email=email)
                 if(q.password==password):
                     return HttpResponse("Success")
                 else:

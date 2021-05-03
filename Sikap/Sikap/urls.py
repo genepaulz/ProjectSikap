@@ -22,4 +22,5 @@ urlpatterns = [
     path('register/',include('register.urls')),
     path('',include('landing.urls')),
     path('view/',include('viewas.urls')),
+    path('posts/',include('posts.urls')),
 ]
