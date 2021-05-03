@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'login',
     'landing',
     'viewas',
-    'posts'
+    'posts',
+    'register'
 ]
 
 MIDDLEWARE = [
