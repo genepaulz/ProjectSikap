@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Create Post</title>
+        {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    <form action="" method="POST">
-        {% csrf_token %}
-        <input type="number" name="yearsOfExperience" placeholder="Years of Experience" value="1">
-        <input type="text" name="industry" placeholder="Industry">
-        <input type="text" name="region" placeholder="Region">
-        <input type="text" name="province" placeholder="Province">
-        <input type="text" name="city" placeholder="City">
-        <input type="number" name="age" placeholder="Age" value="18">
-        <input type="checkbox" name="isAgeViewable"> Viewable Age?
-        <button type="submit" name="posts">Submit</button>
-    </form>
+    <div class="wrapper">
+        <div class ="post-form">
+            <div class ="input-fields">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <input type="number" class="input" name="yearsOfExperience" placeholder="Years of Experience">
+                    <input type="text" class="input" name="industry" placeholder="Industry">
+                    <input type="text" class="input" name="region" placeholder="Region">
+                    <input type="text" class="input" name="province" placeholder="Province">
+                    <input type="text" class="input" name="city" placeholder="City">
+                    <input type="number" class="input" name="age" placeholder="Age">
+                    <br>
+                    <br>
+                    <input type="checkbox" class="checkbox" name="isAgeViewable">
+                    <p>Display Age?</p>
+                    <button type="submit" class="submit" name="posts">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
