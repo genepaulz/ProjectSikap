@@ -1,0 +1,10 @@
+
+LANDING APP
+blank = LANDING
+
+LOGIN APP
+login = LOGIN
+
+VIEWAS APP
+view/e = viewAs EMPLOYER
+view/a = viewAs APPLICANT
