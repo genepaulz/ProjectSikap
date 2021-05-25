@@ -39,7 +39,7 @@ nav{
     padding-top: 3%;
 }
 
-.navbar{    
+.navbar{
     width: 100%;
     position: fixed;
     background: whitesmoke;
@@ -105,7 +105,7 @@ nav{
 .profile-userbuttons .btn:last-child {
   margin-right: 0px;
 }
-    
+
 .profile-usermenu {
   margin-top: 30px;
 }
@@ -168,10 +168,10 @@ nav{
                 <li><a href="#" class="text-secondary">Explore</a></li>
             </ul>
             <div class="nav-right">
-                <form class="form-inline my-2 my-lg-0 al" style="padding-top: 10px;">                        
+                <form class="form-inline my-2 my-lg-0 al" style="padding-top: 10px;">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" style="background: #0496ff;" type="submit">Search</button>
-                </form>   
+                </form>
             </div>
         </div>
     </nav>
@@ -179,19 +179,24 @@ nav{
         <div class="row profile">
             <div class="col-md-3" >
                 <div class="profile-sidebar" id="wrapper">
+
+
                     <!-- SIDEBAR USERPIC -->
                     <div class="profile-userpic">
                         <img src="https://www.facebook.com/photo/?fbid=3130687816941763&set=a.165519550125286" class="img-responsive" alt="">
                     </div>
                     <!-- END SIDEBAR USERPIC -->
                     <!-- SIDEBAR USER TITLE -->
+
                     <div class="profile-usertitle">
+
                         <div class="profile-usertitle-name">
-                            CABARON
+                        {{request.sessions.name}}
                         </div>
                         <div class="profile-usertitle-job">
                             Developer
                         </div>
+
                     </div>
                     <!-- END SIDEBAR USER TITLE -->
                     <!-- SIDEBAR BUTTONS -->
@@ -227,15 +232,16 @@ nav{
                         </ul>
                     </div>
                     <!-- END MENU -->
+
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="profile-content">
-                   idk how to statistics yet
+                  been 4 days still can't figure out to display
+                  specific model values to a template from another app
                 </div>
             </div>
             <div class="col-md-3" id="info">
-                hehe
             </div>
         </div>
     </div>

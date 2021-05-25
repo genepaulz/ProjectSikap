@@ -15,6 +15,9 @@ class User(models.Model):
     city = models.CharField(max_length = 100)
     age = models.IntegerField()
 
+    def __str__(self):
+        return self.name
+
     class Meta:
         db_table = "User"
 
@@ -32,10 +35,10 @@ class MyUser(models.Model):
 
 class Employer(MyUser):
     companyName = models.CharField(max_length = 100)
-    
+
     class Meta:
         db_table = "Employer"
-    
+
 
 class Applicant(MyUser):
     industry = models.CharField(max_length = 100)
@@ -46,6 +49,6 @@ class Applicant(MyUser):
 
     class Meta:
         db_table = "Applicant"
-    
+
 
 # Create your models here.
