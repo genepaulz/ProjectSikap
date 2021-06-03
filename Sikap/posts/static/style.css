@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>Create Post</title>
-    <!-- {% load static %} -->
-    <link rel="stylesheet" href="{% static 'style.css'%}">
-    <style>
-        *{
+*{
     margin : 0;
     padding : 0;
     box-sizing : border-box;
@@ -125,28 +115,3 @@ body{
     background: #fff;
     color: #0D9DBB;
 }
-    </style>
-</head>
-<body>
-    <div class="wrapper">
-        <div class ="post-form">
-            <div class ="input-fields">
-                <form action="" method="POST">
-                    {% csrf_token %}
-                    <input type="number" class="input" name="yearsOfExperience" placeholder="Years of Experience">
-                    <input type="text" class="input" name="industry" placeholder="Industry">
-                    <input type="text" class="input" name="region" placeholder="Region">
-                    <input type="text" class="input" name="province" placeholder="Province">
-                    <input type="text" class="input" name="city" placeholder="City">
-                    <input type="number" class="input" name="age" placeholder="Age">
-                    <br>
-                    <br>
-                    <input type="checkbox" class="checkbox" name="isAgeViewable">
-                    <p>Display Age?</p>
-                    <button type="submit" class="submit" name="posts">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
